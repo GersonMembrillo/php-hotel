@@ -73,6 +73,7 @@
 				<h3><?php echo $hotels[$i]['name'] ?></h3>
 					<ul>
 						<li><?php echo "Descrizione: " . $hotels[$i]['description'] ?></li>
+						<li><?php if ($hotels[$i]['parking'] === true) {echo "Parcheggio: Si";} else {echo "Parcheggio: No";} ?></li>
 						<li><?php echo "Parcheggio: " . $hotels[$i]['parking'] ?></li>
 						<li><?php echo "Voto: " . $hotels[$i]['vote'] ?></li>
 						<li><?php echo "Distanza del centro: " . $hotels[$i]['distance_to_center'] ?></li>
