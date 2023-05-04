@@ -71,15 +71,23 @@
 
 			<?php for ($i = 0; $i < count($hotels); $i++) { ?>
 				<h3><?php echo $hotels[$i]['name'] ?></h3>
-				<ul>
-					<li><?php echo $hotels[$i]['description'] ?></li>
-					<li><?php echo $hotels[$i]['parking'] ?></li>
-					<li><?php echo $hotels[$i]['vote'] ?></li>
-					<li><?php echo $hotels[$i]['distance_to_center'] ?></li>
-				</ul>
+					<ul>
+						<li><?php echo "Descrizione: " . $hotels[$i]['description'] ?></li>
+						<li><?php echo "Parcheggio: " . $hotels[$i]['parking'] ?></li>
+						<li><?php echo "Voto: " . $hotels[$i]['vote'] ?></li>
+						<li><?php echo "Distanza del centro: " . $hotels[$i]['distance_to_center'] ?></li>
+					</ul>
 			<?php } ?>
-			</ul>
 
+			<?php foreach ($hotels as $hotel) { ?>
+				<h3><?php echo $hotel['name'] ?></h3>
+					<ul><?php foreach ($hotel as $key => $value) { ?>
+						<li>
+							<?php echo $key . ' = ' . $value ?>
+						</li>
+						<?php } ?>
+					</ul>
+			<?php } ?>
 		</div>
 	</div>
 </div>
